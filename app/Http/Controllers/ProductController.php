@@ -12,9 +12,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //$prods = Product::get();
+        $prods = Product::get();
 
-        $prods = Product::with('variantCheck')->get();
+        //$prods = Product::with('variantCheck')->get();
 
         return view('product.index', ['list' => $prods]);
     }
